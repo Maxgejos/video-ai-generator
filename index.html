@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Generator Prompt Video AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Struktur Generator Prompt Video AI (8 detik)</h1>
+
+        <div class="section">
+            <h2>1. 🎬 Judul Cerita (Title)</h2>
+            <select id="title-select">
+                <option value="Secangkir Rindu di Pagi Hari">Secangkir Rindu di Pagi Hari</option>
+                <option value="Langkah Terakhir Sebelum Pulang">Langkah Terakhir Sebelum Pulang</option>
+                <option value="Kopi dan Surat Rahasia">Kopi dan Surat Rahasia</option>
+                <option value="Hujan di Bawah Cahaya Senja">Hujan di Bawah Cahaya Senja</option>
+                <option value="Pertemuan yang Tak Direncanakan">Pertemuan yang Tak Direncanakan</option>
+            </select>
+            <input type="text" id="custom-title" placeholder="✏️ [Kustomisasi Judul Sendiri]">
+        </div>
+
+        <div class="section">
+            <h2>2. 📖 Alur Cerita (Storyline / Plot Flow)</h2>
+            <select id="storyline-select">
+                <option value="Slice of life / keseharian">Slice of life / keseharian</option>
+                <option value="Romance singkat">Romance singkat</option>
+                <option value="Momen penuh makna (slowmotion emosi)">Momen penuh makna (slowmotion emosi)</option>
+                <option value="Komedi ringan">Komedi ringan</option>
+                <option value="Inspiratif dan tenang">Inspiratif dan tenang</option>
+            </select>
+            <textarea id="custom-storyline" placeholder="✏️ [Tuliskan Alur Sendiri]&#10;Contoh: "Seorang pria menyeduh kopi sambil melihat foto lama kekasihnya. Kamera fokus ke tatapan kosongnya dan tangan yang bergetar.""></textarea>
+            <p class="note">Catatan: Isian kustom di sini tidak diterjemahkan otomatis.</p>
+        </div>
+
+        <div class="section" id="character-section">
+            <h2>3. 👤 Karakter & Pemeran (Character Setup)</h2>
+            <div id="characters-container">
+                <div class="character-card">
+                    <h3>Karakter 1</h3>
+                    <input type="text" class="character-name" placeholder="Nama (opsional)">
+                    <select class="character-gender">
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                    </select>
+                    <select class="character-age">
+                        <option value="Remaja">Remaja</option>
+                        <option value="Dewasa">Dewasa</option>
+                        <option value="Lansia">Lansia</option>
+                    </select>
+                    <select class="character-mood">
+                        <option value="Murung">Murung</option>
+                        <option value="Tenang">Tenang</option>
+                        <option value="Ceria">Ceria</option>
+                        <option value="Marah">Marah</option>
+                    </select>
+                    <input type="text" class="character-outfit" placeholder="Outfit: Kasual / Daster / Seragam kerja / Baju tidur">
+                    <input type="text" class="character-extras" placeholder="Tambahan: Aksesori, luka, kacamata, dll">
+                </div>
+            </div>
+            <button id="add-character" class="add-button">+ Tambah Karakter</button>
+            <p class="note">📌 [Auto-tag untuk konsistensi karakter per scene]</p>
+        </div>
+
+        <div class="section" id="location-section">
+            <h2>4. 📍 Lokasi / Tempat Kejadian (Setting / Location)</h2>
+            <select id="location-select">
+                <option value="Dapur rumah sederhana">Dapur rumah sederhana</option>
+                <option value="Warung kopi rumahan">Warung kopi rumahan</option>
+                <option value="Teras rumah saat hujan">Teras rumah saat hujan</option>
+                <option value="Kamar tidur dengan cahaya pagi">Kamar tidur dengan cahaya pagi</option>
+                <option value="Jalanan kecil yang sepi">Jalanan kecil yang sepi</option>
+                <option value="Hutan kabut / gunung pagi">Hutan kabut / gunung pagi</option>
+                <option value="Taman kota yang sepi">Taman kota yang sepi</option>
+            </select>
+            <input type="text" id="custom-location" class="custom-input" placeholder="✏️ [Tulis Lokasi Sendiri]">
+            <p class="note">📌 [Auto-tag lokasi agar konsisten di seluruh scene]</p>
+        </div>
+
+        <div class="section" id="visual-section">
+            <h2>5. 🖼️ Gaya Visual / Nuansa Video (Visual Mood & Art Style)</h2>
+            <select id="visual-style-select">
+                <option value="Warm & Calm aesthetic">Warm & Calm aesthetic</option>
+                <option value="Cinematic realistic (seperti film)">Cinematic realistic (seperti film)</option>
+                <option value="Lo-fi grain effect">Lo-fi grain effect</option>
+                <option value="Soft glow morning light">Soft glow morning light</option>
+                <option value="Nostalgic filter / warna pudar">Nostalgic filter / warna pudar</option>
+            </select>
+            <input type="text" id="custom-visual-style" class="custom-input" placeholder="✏️ [Custom visual style]">
+        </div>
+
+        <div class="section" id="camera-section">
+            <h2>6. 🎥 Teknik Pengambilan Gambar (Camera Angle & Motion)</h2>
+            <select id="camera-angle-select">
+                <option value="Close up (dekat ke objek atau ekspresi)">Close up (dekat ke objek atau ekspresi)</option>
+                <option value="Medium shot (dari pinggang ke atas)">Medium shot</option>
+                <option value="Over the shoulder">Over the shoulder</option>
+                <option value="Tracking shot (mengikuti dari belakang)">Tracking shot</option>
+                <option value="Static shot (kamera diam, fokus adegan)">Static shot</option>
+                <option value="Tilt up/down">Tilt up/down</option>
+            </select>
+            <input type="text" id="custom-camera-angle" class="custom-input" placeholder="Atau ketik teknik kamera custom di sini...">
+            <p class="note">Catatan: Isian kustom di sini tidak diterjemahkan otomatis.</p>
+             <p class="note">📌 [Auto-link dengan karakter & lokasi agar sinematik stabil]</p>
+        </div>
+
+        <div class="section">
+            <h2>Pencahayaan (Lighting)</h2>
+            <select id="lighting-select">
+                <option value="Natural lighting">Natural lighting</option>
+                <option value="Golden hour">Golden hour</option>
+                <option value="Blue hour">Blue hour</option>
+                <option value="Neon-lit">Neon-lit</option>
+                <option value="Dramatic backlighting">Dramatic backlighting</option>
+                <option value="Soft, diffused lighting">Soft, diffused lighting</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h2>Tag Kualitas & Gaya (Cth: photorealistic, 8k, cinematic)</h2>
+            <input type="text" id="quality-tags" class="custom-input" value="photorealistic, 8k, award-winning cinematography">
+        </div>
+
+        <div class="section">
+            <h2>Prompt Negatif (Apa yang ingin dihindari)</h2>
+            <input type="text" id="negative-prompt" class="custom-input" value="blurry, deformed, ugly, bad lighting, watermark">
+        </div>
+
+        <div class="section">
+            <h2>Dialog / Percakapan</h2>
+            <textarea id="dialogue" rows="3" placeholder="Ketik dialog di sini (tidak akan diterjemahkan)..."></textarea>
+        </div>
+
+        <div class="actions-container">
+            <button id="generate-prompt">Generate Prompt</button>
+            <div class="sub-actions">
+                <button id="unlock-btn" title="Buka Kunci Form">Buka Kunci</button>
+                <button id="reset-btn" title="Mulai Cerita Baru">Reset Total</button>
+            </div>
+        </div>
+
+        <div id="output-section" style="display:none;">
+            <h2>Hasil Prompt</h2>
+            <div class="output-container">
+                <div class="output-column">
+                    <label for="output-indonesian">Output (Bahasa Indonesia):</label>
+                    <textarea id="output-indonesian" rows="15" readonly></textarea>
+                </div>
+                <div class="output-column">
+                    <label for="output-english">Output (English Translation):</label>
+                    <textarea id="output-english" rows="15" readonly></textarea>
+                </div>
+            </div>
+            <div class="professional-prompt-container">
+                <label for="professional-prompt">Professional Prompt for Veo (Copy-Paste Ready):</label>
+                <textarea id="professional-prompt" rows="10" readonly></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="story_data.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
